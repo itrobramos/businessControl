@@ -1,45 +1,52 @@
-@extends('layouts.app')
+@extends('layouts.business')
 @section('content')
 
-<div class="row">
-    <div class="col">
+<div class="row justify-content-center">
+    <div class="col-md-10" >
         <div class="card shadow">
             <div class="card-header border-0">
-                <h3 class="mb-0">Empresas</h3>
+                <h3 class="mb-0">Clientes</h3>
                 <br>
-                <div class="col-1 text-right">
-                    <a href="{{ url('companies/create')}}" class="btn btn-sm btn-primary">Agregar</a>
+                <div class="col-12 text-right justify-content-end ">
+                    <a href="{{ url('clients/create')}}" class="btn btn-sm btn-primary">Agregar</a>
                 </div>
             </div>
             <div class="table-responsive">
-                <table class="table align-items-center table-hover" id="datatable">
+                <table class="table align-items-center table-hover" id="datatable" >
                     <thead class="thead-light">
                         <tr>
+                            <th></th>
                             <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Teléfono</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($companies as $company)
+                        @foreach($clients as $client)
                         <tr>
-                            <th scope="row">
+                            <td scope="row">
                                 <div class="media align-items-center">
                                     <a href="#" class="avatar rounded-circle mr-3">
-                                        <img alt="Image" style="width:40px; height:40px;" src="{{$company->logoUrl}}">
+                                        <img alt="Image" style="width:40px; height:40px;" src="{{$client->imageUrl}}">
                                     </a>
-                                    <div class="media-body">
-                                        <span class="mb-0 text-sm">{{$company->name}}</span>
-                                    </div>
                                 </div>
-                            </th>                            
+                            </td>
+                            
+                            <td>{{$client->first_name}}</td>
+                            <td>{{$client->last_name}}</td>
+                            <td>{{$client->phone}}</td>
 
-                          
                             <td class="text-left">
-                                <form method='post' action="{{ url('/companies/' . $company->id) }}">
+                                <form method='post' action="{{ url('/clients/' . $client->id) }}">
                                     {{ csrf_field()}}
                                     {{ method_field('DELETE')}}
+                                    <a href="./client/{{$client->id}}/details"><button
+                                            class="btn btn-icon btn-2 btn-success btn-sm" type="button">
+                                            <span class="btn-inner--icon"><i class="fas fa-eye"></i></span>
+                                        </button></a>
 
-                                    <a href="./companies/{{$company->id}}/edit"><button
+                                    <a href="./clients/{{$client->id}}/edit"><button
                                             class="btn btn-icon btn-2 btn-primary btn-sm" type="button">
                                             <span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
                                         </button></a>

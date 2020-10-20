@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{env('DEPLOY_URL')}}/assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="{{env('DEPLOY_URL')}}/assets/css/Footer-with-social-media-icons.css">
 
+
+    
         <script src="{{env('DEPLOY_URL')}}/assets/js/jquery.min.js"></script>
 
 </head>
@@ -124,23 +126,6 @@
                     @yield('content')
                 </main>
             </div>
-            <footer class="bg-white sticky-footer">
-                <footer id="footerpad">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-8 mx-auto">
-                                <ul class="list-inline text-center">
-                                    <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a></li>
-                                    <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></li>
-                                    <li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a></li>
-                                </ul>
-                                <br>
-                                <p class="copyright text-muted text-center">Copyright © VR 2020 </p>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
 
@@ -149,6 +134,10 @@
     <script src="{{env('DEPLOY_URL')}}/assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="{{env('DEPLOY_URL')}}/assets/js/theme.js"></script>
+
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
 </body>
 
 </html>

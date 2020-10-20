@@ -21,13 +21,14 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-// Categories
-Route::get('/categories', 'CategoriesController@index');
-Route::get('/categories/create',"CategoriesController@create");
-Route::get('/categories/{id}/edit', "CategoriesController@edit");
-Route::post('/categories', 'CategoriesController@store');
-Route::patch('/categories/{id}','CategoriesController@update');
-Route::delete('/categories/{id}', 'CategoriesController@destroy');
+// Clients
+Route::get('/clients', 'ClientController@index');
+Route::get('/clients/create',"ClientController@create");
+Route::get('/clients/{id}/edit', "ClientController@edit");
+Route::get('/clients/{id}/details', "ClientController@details");
+Route::post('/clients', 'ClientController@store');
+Route::patch('/clients/{id}','ClientController@update');
+Route::delete('/clients/{id}', 'ClientController@destroy');
 
 
 Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider')->name('social.auth');
