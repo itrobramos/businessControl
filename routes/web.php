@@ -31,6 +31,16 @@ Route::patch('/clients/{id}','ClientController@update');
 Route::delete('/clients/{id}', 'ClientController@destroy');
 
 
+// Companies
+Route::get('/companies', 'CompanyController@index');
+Route::get('/companies/create',"CompanyController@create");
+Route::get('/companies/{id}/edit', "CompanyController@edit");
+Route::get('/companies/{id}/details', "CompanyController@details");
+Route::post('/companies', 'CompanyController@store');
+Route::patch('/companies/{id}','CompanyController@update');
+Route::delete('/companies/{id}', 'CompanyController@destroy');
+
+
 Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider')->name('social.auth');
 Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
 

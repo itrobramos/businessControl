@@ -35,7 +35,7 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('subcategories')}}"><i class="fas fa-table"></i><span>Calendario</span></a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('companies')}}"><i class="fas fa-table"></i><span>Entregas</span></a></li>
                     <hr>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('subcategories')}}"><i class="fas fa-table"></i><span>Marcas</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('companies')}}"><i class="fas fa-table"></i><span>Marcas</span></a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('companies')}}"><i class="fas fa-table"></i><span>Productos</span></a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('companies')}}"><i class="fas fa-table"></i><span>Configuración</span></a></li>
 
