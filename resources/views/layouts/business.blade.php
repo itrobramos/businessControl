@@ -31,7 +31,7 @@
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="{{url('home')}}"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('clients')}}"><i class="fas fa-table"></i><span>Clientes</span></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('subcategories')}}"><i class="fas fa-table"></i><span>Distribuidores</span></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('consultants')}}"><i class="fas fa-table"></i><span>Consultores</span></a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('subcategories')}}"><i class="fas fa-table"></i><span>Calendario</span></a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('companies')}}"><i class="fas fa-table"></i><span>Entregas</span></a></li>
                     <hr>

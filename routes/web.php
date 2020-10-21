@@ -40,6 +40,15 @@ Route::post('/companies', 'CompanyController@store');
 Route::patch('/companies/{id}','CompanyController@update');
 Route::delete('/companies/{id}', 'CompanyController@destroy');
 
+//Consultant
+Route::get('/consultants', 'ConsultantController@index');
+Route::get('/consultants/create',"ConsultantController@create");
+Route::get('/consultants/{id}/edit', "ConsultantController@edit");
+Route::get('/consultants/{id}/details', "ConsultantController@details");
+Route::post('/consultants', 'ConsultantController@store');
+Route::patch('/consultants/{id}','ConsultantController@update');
+Route::delete('/consultants/{id}', 'ConsultantController@destroy');
+
 
 Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider')->name('social.auth');
 Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
