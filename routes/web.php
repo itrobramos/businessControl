@@ -49,6 +49,15 @@ Route::post('/consultants', 'ConsultantController@store');
 Route::patch('/consultants/{id}','ConsultantController@update');
 Route::delete('/consultants/{id}', 'ConsultantController@destroy');
 
+//Product
+Route::get('/products', 'ProductController@index');
+Route::get('/products/create',"ProductController@create");
+Route::get('/products/{id}/edit', "ProductController@edit");
+Route::get('/products/{id}/details', "ProductController@details");
+Route::post('/products', 'ProductController@store');
+Route::patch('/products/{id}','ProductController@update');
+Route::delete('/products/{id}', 'ProductController@destroy');
+
 
 Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider')->name('social.auth');
 Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');

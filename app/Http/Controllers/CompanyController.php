@@ -59,9 +59,6 @@ class CompanyController extends Controller
             File::delete($Company->imageUrl);
             $Company->imageUrl = 'public/uploads/images/' . $filename;
         }
-        else{
-            $Company->imageUrl = 'public/uploads/images/default.png';
-        }
 
         $Company->save();
         return redirect('companies')->with('Message', 'Compañía creado correctamente');

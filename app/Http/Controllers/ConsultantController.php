@@ -94,9 +94,6 @@ class ConsultantController extends Controller
             File::delete($consultant->imageUrl);
             $consultant->imageUrl = 'public/uploads/images/' . $filename;
         }
-        else{
-            $consultant->imageUrl = 'public/uploads/images/default.png';
-        }
 
         $consultant->save();
         return redirect('consultants')->with('Message', 'Consultor creado correctamente');

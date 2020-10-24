@@ -90,9 +90,6 @@ class ClientController extends Controller
             File::delete($Client->imageUrl);
             $Client->imageUrl = 'public/uploads/images/' . $filename;
         }
-        else{
-            $Client->imageUrl = 'public/uploads/images/default.png';
-        }
 
         $Client->save();
         return redirect('clients')->with('Message', 'Cliente creado correctamente');
